@@ -27,3 +27,7 @@ button {
   display: flex;
   gap: 20px;
 }
+
+.images {
+  width: 350px;
+}
