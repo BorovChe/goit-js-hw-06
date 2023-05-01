@@ -15,6 +15,8 @@ const images = [
 
 const ulEl = document.querySelector(".gallery");
 
-images.forEach((img) => {
-  ulEl.insertAdjacentHTML("afterbegin",`<li><img class = "images" src="${img.url}" alt="${img.alt}"></li>`);
+const newEl = images.map((img) => {
+  return `<li><img class = "images" src="${img.url}" alt="${img.alt}"></li>`;
 });
+const newElLine = newEl.join("");
+ulEl.insertAdjacentHTML("afterbegin", newElLine);
